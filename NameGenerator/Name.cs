@@ -18,6 +18,12 @@ namespace NameGenerator
             OtherLanguages = 1 << 5
         }
 
+        //All lowercase
+        public static string[] GamerTags = 
+            { 
+            "bolb"
+            };
+
 
 
     }

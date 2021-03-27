@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 using static NameGenerator.Name;
 
 namespace NameGenerator
@@ -13,23 +15,21 @@ namespace NameGenerator
         public NameTypes GeneratorFlags = NameTypes.None;
 
 
+
         public string Generate()
         {
-
-            switch (random.Next(1, 3))
-            {
-                case 1:
-                    return "Butt";
-                case 2:
-                    return "Yeaz";
-                case 3:
-                    return "T";
-                default:
-                    return "Bolb";
-            }
+            return "Name";
         }
 
+        public string GenerateGamerTag() 
+        {
+            throw new NotImplementedException(); 
+        }
 
+        public string GenerateRealName()
+        {
+            throw new NotImplementedException();
+        }
 
 
     }
