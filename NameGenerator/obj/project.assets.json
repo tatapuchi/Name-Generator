@@ -184,7 +184,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "0.1.0",
+    "version": "0.1.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\Aorus\\source\\repos\\NameGenerator\\NameGenerator\\NameGenerator.csproj",
       "projectName": "NameGenerator",

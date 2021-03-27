@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>NameGenerator</id>
+    <version>0.1.1</version>
+    <title>$title$</title>
+    <authors>0xB01b</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/tatapuchi/Name-Generator</projectUrl>
+	  <icon>Images\Rock_With_Hat_Big.png</icon>
+    <description>A library for genereating random names</description>
+    <releaseNotes>Development Phase</releaseNotes>
+  </metadata>
+</package>
