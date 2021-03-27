@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fSKZB9NhJgK16wXOkIsyyL84Bd8Ri+vDleGFXyvEulgWjJ+czd+QRf0w6Kwxnt64+33YrN6lN2TJsavWejR68Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aorus\\source\\repos\\NameGenerator\\NameGenerator\\NameGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aorus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Aorus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\bin\Debug\netstandard2.0\NameGenerator.deps.json
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\bin\Debug\netstandard2.0\NameGenerator.dll
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\bin\Debug\netstandard2.0\NameGenerator.pdb
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.csprojAssemblyReference.cache
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.AssemblyInfoInputs.cache
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.AssemblyInfo.cs
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.dll
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.pdb
