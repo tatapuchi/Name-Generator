@@ -10,25 +10,58 @@ namespace NameGenerator
     public class Generator
     {
         private Random random = new Random();
-        private string[] GamerTags;
-        private string[] Realistic;
         public NameTypes GeneratorFlags = NameTypes.None;
 
 
 
         public string Generate()
         {
-            return "Name";
+            return GenerateGamerTag();
         }
 
         public string GenerateGamerTag() 
         {
-            throw new NotImplementedException(); 
+            switch(random.Next(0, 4))
+            {
+                case 0:
+                    return Gamerify(Name.bolb);
+                case 1:
+                    return Gamerify(Name.doge);
+                case 2:
+                    return Gamerify(Name.cheems);
+                case 3:
+                    return Gamerify(Name.cheebs);
+                case 4:
+                    return Gamerify(Name.troll);
+                default:
+                    return string.Empty;
+
+            }
         }
 
         public string GenerateRealName()
         {
-            throw new NotImplementedException();
+            switch (random.Next(0, 4))
+            {
+                case 0:
+                    return Gamerify(Name.bolb);
+                case 1:
+                    return Gamerify(Name.doge);
+                case 2:
+                    return Gamerify(Name.cheems);
+                case 3:
+                    return Gamerify(Name.cheebs);
+                case 4:
+                    return Gamerify(Name.troll);
+                default:
+                    return string.Empty;
+
+            }
+        }
+
+        private string Gamerify(string gamerTag)
+        {
+            return gamerTag.Replace("o", "0").Replace("l", "1").Replace("e", "3");
         }
 
 

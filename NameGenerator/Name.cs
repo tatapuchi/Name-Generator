@@ -17,12 +17,16 @@ namespace NameGenerator
             SpecialCharacters = 1 << 4,
             OtherLanguages = 1 << 5
         }
-
+        //o -> 0
+        //e -> 3
+        //i -> !
         //All lowercase
-        public static string[] GamerTags = 
-            { 
-            "bolb"
-            };
+
+        public static string bolb = "bolb";
+        public static string doge = "doge";
+        public static string cheems = "cheems";
+        public static string cheebs = "cheebs";
+        public static string troll = "troll";
 
 
 
