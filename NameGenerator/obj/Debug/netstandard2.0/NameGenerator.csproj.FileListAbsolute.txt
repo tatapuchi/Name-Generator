@@ -7,3 +7,4 @@ C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0
 C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.dll
 C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.pdb
 C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\obj\Debug\netstandard2.0\NameGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Aorus\source\repos\NameGenerator\NameGenerator\bin\Debug\netstandard2.0\NameGenerator.xml
