@@ -4,5 +4,118 @@
         <name>NameGenerator</name>
     </assembly>
     <members>
+        <member name="T:NameGenerator.GamerTagGenerator">
+            <summary>
+            Class for generating gamer tags
+            </summary>
+        </member>
+        <member name="M:NameGenerator.GamerTagGenerator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:NameGenerator.GamerTagGenerator.GeneratorFlags">
+            <summary>
+            Settings regarding generated names
+            </summary>
+        </member>
+        <member name="F:NameGenerator.GamerTagGenerator.SpaceCharacter">
+            <summary>
+            Settings regarding what character to be used as a space
+            </summary>
+        </member>
+        <member name="M:NameGenerator.GamerTagGenerator.Generate">
+            <summary>
+            Method that generates a gamertag, taking into account generation flags such as whether to add numbers or not
+            </summary>
+            <returns>A string containing a gamertag</returns>
+        </member>
+        <member name="T:NameGenerator.IGenerator">
+            <summary>
+            Top level class regarding the different name Generators
+            </summary>
+        </member>
+        <member name="M:NameGenerator.IGenerator.Generate">
+            <summary>
+            Method that generates names
+            </summary>
+            <returns>string that contains the name generated</returns>
+        </member>
+        <member name="T:NameGenerator.IGenerator.NameTypes">
+            <summary>
+            Enum containing all the different generator flags
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.NameTypes.None">
+            <summary>
+            No Flags, just simple name generation
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.NameTypes.Numbers">
+            <summary>
+            A number between 0 and 999 will be appended to the name
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.NameTypes.Hashtag">
+            <summary>
+            A hashtag will come before the name
+            </summary>
+        </member>
+        <member name="T:NameGenerator.IGenerator.SpaceTypes">
+            <summary>
+            Enum containing all the different characters thatt can be used for spaces
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.SpaceTypes.None">
+            <summary>
+            No space character, all letters come right after one another
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.SpaceTypes.Space">
+            <summary>
+            Space character used the space character
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.SpaceTypes.Underscore">
+            <summary>
+            Underscore used as the space character
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.SpaceTypes.Hyphen">
+            <summary>
+            Hyphen , AKA dash, used as the space character
+            </summary>
+        </member>
+        <member name="F:NameGenerator.IGenerator.SpaceTypes.Period">
+            <summary>
+            A period used as the space character
+            </summary>
+        </member>
+        <member name="T:NameGenerator.NameGenerator">
+            <summary>
+            Class for generating real names
+            </summary>
+        </member>
+        <member name="M:NameGenerator.NameGenerator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="F:NameGenerator.NameGenerator.GeneratorFlags">
+            <summary>
+            Settings regarding generated names
+            </summary>
+        </member>
+        <member name="F:NameGenerator.NameGenerator.SpaceCharacter">
+            <summary>
+            Settings regarding what character to be used as a space
+            </summary>
+        </member>
+        <member name="M:NameGenerator.NameGenerator.Generate">
+            <summary>
+            Method that generates a real name, taking into account generation flags such as whether to add numbers or not
+            </summary>
+            <returns>A string containing a first and last name</returns>
+        </member>
     </members>
 </doc>
