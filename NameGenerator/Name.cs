@@ -4,7 +4,7 @@ using System.Text;
 
 namespace NameGenerator
 {
-    public static class Name
+    public class Name
     {
         [Flags]
         public enum NameTypes : long
@@ -22,11 +22,22 @@ namespace NameGenerator
         //i -> !
         //All lowercase
 
-        public static string bolb = "bolb";
-        public static string doge = "doge";
-        public static string cheems = "cheems";
-        public static string cheebs = "cheebs";
-        public static string troll = "troll";
+
+        public List<string> GamerTags = new List<string>() 
+        { 
+            "bolb", "doge", "cheems", "cheebs", "troll", "lol"
+        };
+
+
+        public List<string> FirstNames = new List<string>() 
+        {
+            "Jack", "John", "Aiden", "Rebecca", "Josh", "Anais", "Vibhor", "Danial", "Ulises", "Oliver", "David", "Diego" 
+        };
+
+
+        public List<string> LastNames = new List<string>() {
+            "Griffin", "Brown", "Singh", "Deyes", "Holst", "Müller", "Chang", "Sanchez" 
+        };
 
 
 
