@@ -38,36 +38,7 @@ namespace NameGenerator
             Hashtag = 1 << 1
         }
 
-        /// <summary>
-        /// Enum containing all the different characters thatt can be used for spaces
-        /// </summary>
-        public enum SpaceTypes
-        {
-            /// <summary>
-            /// No space character, all letters come right after one another
-            /// </summary>
-            None,
 
-            /// <summary>
-            /// Space character used the space character
-            /// </summary>
-            Space,
-
-            /// <summary>
-            /// Underscore used as the space character
-            /// </summary>
-            Underscore,
-
-            /// <summary>
-            /// Hyphen , AKA dash, used as the space character
-            /// </summary>
-            Hyphen,
-
-            /// <summary>
-            /// A period used as the space character
-            /// </summary>
-            Period
-        }
 
     }
 }

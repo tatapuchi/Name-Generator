@@ -15,27 +15,7 @@ namespace NameGenerator
         /// </summary>
         public GamerTagGenerator()
         {
-            switch (SpaceCharacter)
-            {
-                case SpaceTypes.Space:
-                    Space = "";
-                    break;
-                case SpaceTypes.None:
-                    Space = string.Empty;
-                    break;
-                case SpaceTypes.Underscore:
-                    Space = "_";
-                    break;
-                case SpaceTypes.Hyphen:
-                    Space = "-";
-                    break;
-                case SpaceTypes.Period:
-                    Space = ".";
-                    break;
-                default:
-                    Space = " ";
-                    break;
-            }
+            Space = "_";
         }
 
         private Random random = new Random();
@@ -46,12 +26,9 @@ namespace NameGenerator
         public NameTypes GeneratorFlags = NameTypes.Numbers;
 
         /// <summary>
-        /// Settings regarding what character to be used as a space
+        /// What character is to be used as a space
         /// </summary>
-        public SpaceTypes SpaceCharacter = SpaceTypes.Underscore;
-
-        //Whatever character we have for space
-        private string Space;
+        public string Space { get; set; }
 
         private List<string> GamerTags = new List<string>()
         {
@@ -67,7 +44,7 @@ namespace NameGenerator
         {
             string gamerTag = Randomize(GamerTags[random.Next(0, GamerTags.Count)]);
 
-            gamerTag.Replace(" ", Space);
+            gamerTag = gamerTag.Replace(" ", Space);
 
             if (GeneratorFlags.HasFlag(NameTypes.Numbers)) { gamerTag += (Space + random.Next(0, 999).ToString()); }
 
@@ -83,28 +60,23 @@ namespace NameGenerator
 
             if (random.Next(0, 100) <= 50 ? true : false)
             {
-                gamerTag.Replace("o", "0");
+                gamerTag = gamerTag.Replace("o", "0");
             }
 
             if (random.Next(0, 100) <= 50 ? true : false)
             {
-                gamerTag.Replace("l", "1");
+                gamerTag = gamerTag.Replace("l", "1");
             }
 
             if (random.Next(0, 100) <= 50 ? true : false)
             {
-                gamerTag.Replace("e", "3");
+                gamerTag = gamerTag.Replace("e", "3");
             }
 
             if (random.Next(0, 100) <= 50 ? true : false)
             {
-                gamerTag.Replace("S", "$");
-                gamerTag.Replace("s", "$");
-            }
-
-            if (random.Next(0, 100) <= 50 ? true : false)
-            {
-                gamerTag += "o_o";
+                gamerTag = gamerTag.Replace("S", "$");
+                gamerTag = gamerTag.Replace("s", "$");
             }
 
             return gamerTag;

@@ -15,27 +15,7 @@ namespace NameGenerator
         /// </summary>
         public NameGenerator()
         {
-            switch (SpaceCharacter)
-            {
-                case SpaceTypes.Space:
-                    Space = "";
-                    break;
-                case SpaceTypes.None:
-                    Space = string.Empty;
-                    break;
-                case SpaceTypes.Underscore:
-                    Space = "_";
-                    break;
-                case SpaceTypes.Hyphen:
-                    Space = "-";
-                    break;
-                case SpaceTypes.Period:
-                    Space = ".";
-                    break;
-                default:
-                    Space = " ";
-                    break;
-            }
+            Space = " ";
 
         }
 
@@ -48,12 +28,9 @@ namespace NameGenerator
         public NameTypes GeneratorFlags = NameTypes.None;
 
         /// <summary>
-        /// Settings regarding what character to be used as a space
+        /// What character is to be used as a space
         /// </summary>
-        public SpaceTypes SpaceCharacter = SpaceTypes.Space;
-
-        //Whatever character we have for space
-        private string Space;
+        public string Space { get; set; }
 
         private List<string> FirstNames = new List<string>()
         {

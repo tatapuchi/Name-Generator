@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.1</Version>
+    <Version>1.0.3</Version>
     <Authors>0xB01b</Authors>
     <Description>A library for generating random names and gamertags.</Description>
     <PackageIcon>Rock_With_Hat_Big.png</PackageIcon>
     <RepositoryUrl>https://github.com/tatapuchi/Name-Generator</RepositoryUrl>
     <LangVersion>8.0</LangVersion>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
