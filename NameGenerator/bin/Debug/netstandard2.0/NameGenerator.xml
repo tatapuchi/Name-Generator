@@ -37,7 +37,7 @@
         </member>
         <member name="M:NameGenerator.IGenerator.Generate">
             <summary>
-            Method that generates names
+            Method that generates names, gamertags, etc.
             </summary>
             <returns>string that contains the name generated</returns>
         </member>
@@ -63,7 +63,8 @@
         </member>
         <member name="T:NameGenerator.NameGenerator">
             <summary>
-            Class for generating real names
+            This is the generator subclass for generating real names.
+            Contains a single method for the generation of a name.
             </summary>
         </member>
         <member name="M:NameGenerator.NameGenerator.#ctor">
@@ -73,19 +74,19 @@
         </member>
         <member name="F:NameGenerator.NameGenerator.GeneratorFlags">
             <summary>
-            Settings regarding generated names
+            These are enum flags regarding generation settings, such as whether or not to append numbers to the name
             </summary>
         </member>
         <member name="P:NameGenerator.NameGenerator.Space">
             <summary>
-            What character is to be used as a space
+            String that is used instead of a space character, by default it is set to space
             </summary>
         </member>
         <member name="M:NameGenerator.NameGenerator.Generate">
             <summary>
-            Method that generates a real name, taking into account generation flags such as whether to add numbers or not
+            This method generates a random real name, taking generation flags and the chosen space character into account
             </summary>
-            <returns>A string containing a first and last name</returns>
+            <returns>A string containing a random first and last name, seperated by the chosen space character</returns>
         </member>
     </members>
 </doc>

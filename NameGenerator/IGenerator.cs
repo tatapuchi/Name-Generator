@@ -10,7 +10,7 @@ namespace NameGenerator
     public interface IGenerator
     {
         /// <summary>
-        /// Method that generates names
+        /// Method that generates names, gamertags, etc.
         /// </summary>
         /// <returns>string that contains the name generated</returns>
         public string Generate();

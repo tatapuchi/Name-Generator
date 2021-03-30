@@ -6,7 +6,8 @@ using static NameGenerator.IGenerator;
 namespace NameGenerator
 {
     /// <summary>
-    /// Class for generating real names
+    /// This is the generator subclass for generating real names.
+    /// Contains a single method for the generation of a name.
     /// </summary>
     public class NameGenerator : IGenerator
     {
@@ -16,48 +17,85 @@ namespace NameGenerator
         public NameGenerator()
         {
             Space = " ";
+            
 
         }
-
 
         private Random random = new Random();
 
         /// <summary>
-        /// Settings regarding generated names
+        /// These are enum flags regarding generation settings, such as whether or not to append numbers to the name
         /// </summary>
         public NameTypes GeneratorFlags = NameTypes.None;
 
+
         /// <summary>
-        /// What character is to be used as a space
+        /// String that is used instead of a space character, by default it is set to space
         /// </summary>
         public string Space { get; set; }
 
-        private List<string> FirstNames = new List<string>()
-        {
-            "Jack", "John", "Aiden", "Rebecca", "Josh", "Anais", "Vibhor", "Danial", "Ulises", "Oliver", "David", "Diego", "Joaquin",
-            "Joe", "Albert", "Philipp", "Josh", "Jayden", "Will", "Tyrone", "Akansh", "Stephanie", "Hollis", "Valeria", "Andre", "Luca"
-        };
-
-
-        private List<string> LastNames = new List<string>() {
-            "Griffin", "Brown", "Singh", "Deyes", "Holst", "Müller", "Chang", "Sanchez", "Smith", "Italiano", "Foster", "Simpson", "Gupta", "Bachmann",
-            "Arroyo", "Cuida", "Kosma"
-        };
-
-
         /// <summary>
-        /// Method that generates a real name, taking into account generation flags such as whether to add numbers or not
+        /// This method generates a random real name, taking generation flags and the chosen space character into account
         /// </summary>
-        /// <returns>A string containing a first and last name</returns>
+        /// <returns>A string containing a random first and last name, seperated by the chosen space character</returns>
         public string Generate()
         {
-            string name = FirstNames[random.Next(0, FirstNames.Count)] + Space + LastNames[random.Next(0, LastNames.Count)];
+            string name;
+
+            if (random.Next(0, 100) <= 50 ? true : false)
+            {
+
+                name = Names.AmericanMaleFirstNames[random.Next(0, Names.AmericanMaleFirstNames.Count)] + Space + Names.AmericanLastNames[random.Next(0, Names.AmericanLastNames.Count)];
+            }
+            else
+            {
+
+                name = Names.AmericanFemaleFirstNames[random.Next(0, Names.AmericanFemaleFirstNames.Count)] + Space + Names.AmericanLastNames[random.Next(0, Names.AmericanLastNames.Count)];
+            }
+
 
             if (GeneratorFlags.HasFlag(NameTypes.Numbers)) { name += (Space + random.Next(0, 999).ToString()); }
 
             if (GeneratorFlags.HasFlag(NameTypes.Hashtag)) { name = "#" + name; }
 
             return name;
+
+
+
         }
+
+
+        private static class Names
+        {
+
+                public static List<string> AmericanMaleFirstNames = new List<string>()
+            {
+                "Liam", "Noah", "Oliver", "William", "Elijah", "James", "Benjamin", "Lucas", "Mason", "Ethan", "Alexander", "Henry", "Jacob",
+                "Michael", "Danial", "Logan", "Jackson", "Sebastian", "Jack", "Aiden", "Owen", "Samuel", "Matthew", "Joseph", "Levi", "Mateo",
+                "David", "John", "Wyatt", "Carter", "Julian", "Luke", "Grayson", "Isaac", "Jayden", "Theodore", "Gabriel", "Anthony", "Dylon", 
+                "Leo", "Lincoln", "Jacxon", "Asher", "Christopher", "Andre"
+            };
+
+            public static List<string> AmericanFemaleFirstNames = new List<string>()
+            {
+             "Mary", "Patricia", "Linda", "Barbara", "Elizabeth", "Jennifer", "Maria", "Susan", "Margaret", "Dorothy", "Lisa", "Nancy", "Karen", "Betty", "Helen", "Sandra",
+             "Donna", "Carol", "Ruth", "Sharon", "Michelle", "Laura", "Sarah", "Kimberly", "Deborah", "Jessica", "Shirley", "Cynthia", "Angela", "Melissa", "Brenda", "Amy",
+             "Anna"
+            };
+
+            public static List<string> AmericanLastNames = new List<string>()
+            {
+                "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson",
+                "Anderson", "Thomas", "Taylor", "Moore", "Jackson", "Martin", "Lee", "Perez", "Thompson", "White", "Sanchez", "Harris", "Clark", "Ramirez", "Lewis", "Robinson",
+                "Walker", "Young", "Allen", "King", "Wright", "Scott", "Torres", "Nguyen", "Hill", "Flores", "Green", "Adams", "Nelson", "Baker", "Hall", "Rivera", "Campbell", 
+                "Mitchell", "Carter", "Roberts"
+            };
+
+
+
+
+        }
+
+
     }
 }
