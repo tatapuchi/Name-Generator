@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "NameGenerator/1.0.1": {
+      "NameGenerator/1.0.4": {
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "System.Text.Json": "5.0.1"
@@ -112,7 +112,7 @@
     }
   },
   "libraries": {
-    "NameGenerator/1.0.1": {
+    "NameGenerator/1.0.4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
