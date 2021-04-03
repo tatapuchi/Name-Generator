@@ -32,7 +32,7 @@ You can change whatever character you use as a space, for the `NameGenerator` cl
 You can change this to whatever you want, simply change the property in your instance of whatever generator you are using
 
 ```csharp
-NameGenerator.NameGenerator Generator = new NameGenerator.NameGenerator();
+NameGenerator Generator = new NameGenerator();
 Generator.Space = "-";
 //You are now using a hypen(dash) for instead of a space
 ```
