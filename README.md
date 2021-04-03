@@ -16,7 +16,7 @@ Create an instance of the `NameGenerator` class, and simply call the `Generate()
 
 ### Generating Gamertags
 
-We have a list of first and last names that get randomly mashed together and returned, to generate real names, refer to the following code:
+I made a list of gamertags upon which certain operations are performed to create new ones, to generate gamertags, refer to the following code:
 
 ```csharp
 GamerTagGenerator Generator = new GamerTagGenerator();
