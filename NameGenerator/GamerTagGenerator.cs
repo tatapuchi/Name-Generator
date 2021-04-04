@@ -32,7 +32,7 @@ namespace NameGenerator
 
         private List<string> GamerTags = new List<string>()
         {
-            "bolb", "doge", "cheems", "cheebs", "troll", "lol", "amogus", "red", "sus", "chungus", "big chungus", "impostor", "guagg", "krab", "yo mama", "yharon"
+            "bolb", "doge", "cheems", "cheebs", "troll", "lol", "amogus", "red", "sus", "chungus", "big chungus", "impostor", "guagg", "krab", "yo mama", "yharon", "clam"
         };
 
 
@@ -71,6 +71,16 @@ namespace NameGenerator
             if (random.Next(0, 100) <= 50 ? true : false)
             {
                 gamerTag = gamerTag.Replace("e", "3");
+            }
+
+            if (random.Next(0, 100) <= 50 ? true : false)
+            {
+                gamerTag = gamerTag.Replace("a", "@");
+            }
+
+            if (random.Next(0, 100) <= 50 ? true : false)
+            {
+                gamerTag = gamerTag.Replace("l", "|");
             }
 
             if (random.Next(0, 100) <= 50 ? true : false)
