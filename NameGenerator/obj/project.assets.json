@@ -520,7 +520,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.4",
+    "version": "1.0.5",
     "restore": {
       "projectUniqueName": "C:\\Users\\Aorus\\source\\repos\\NameGenerator\\NameGenerator\\NameGenerator.csproj",
       "projectName": "NameGenerator",
