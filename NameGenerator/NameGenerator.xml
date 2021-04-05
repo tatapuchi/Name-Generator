@@ -4,89 +4,105 @@
         <name>NameGenerator</name>
     </assembly>
     <members>
-        <member name="T:NameGenerator.GamerTagGenerator">
+        <member name="T:NameGenerator.GeneratorBase">
             <summary>
-            Class for generating gamer tags
+            An abstract class that serves as the base for all generators.
             </summary>
         </member>
-        <member name="M:NameGenerator.GamerTagGenerator.#ctor">
+        <member name="F:NameGenerator.GeneratorBase.random">
             <summary>
-            Constructor
+            An instance of the Random class used to randomize the generation.
             </summary>
         </member>
-        <member name="F:NameGenerator.GamerTagGenerator.GeneratorFlags">
+        <member name="M:NameGenerator.GeneratorBase.Generate">
             <summary>
-            Settings regarding generated names
+            The method for generating names or gamertags.
+            </summary>
+            <returns>A string containing the generated name.</returns>
+        </member>
+        <member name="P:NameGenerator.GeneratorBase.GeneratorFlags">
+            <summary>
+            An enum property that defines the generator flags, which perform additional operations on the string once it has been generated.
+            By default there are no generator flags.
+            </summary>
+            <remarks>
+            Possible generator flags could be Numbers or Hashtag.
+            </remarks>
+            <example>
+            <code>
+            Generator MyGenerator = new Generator();
+            MyGenerator.GeneratorFlags |= NameTypes.Number;
+            MyGenerator.Generate();
+            </code>
+            </example>
+        </member>
+        <member name="P:NameGenerator.GeneratorBase.SpaceCharacter">
+            <summary>
+            A string property that defines what character to be used in place of a space.
+            By default, the space character is a space.
+            </summary>
+            <remarks>
+            Possible space characters could be an underscore, a dash, a space, nothing at all, etc.
+            </remarks>
+            <example>
+            <code>
+            Generator MyGenerator = new Generator();
+            MyGenerator.SpaceCharacter = "_"
+            MyGenerator.Generate();
+            </code>
+            </example>
+        </member>
+        <member name="T:NameGenerator.GeneratorBase.NameTypes">
+            <summary>
+            Enum containing all the different generator flags.
             </summary>
         </member>
-        <member name="P:NameGenerator.GamerTagGenerator.Space">
+        <member name="F:NameGenerator.GeneratorBase.NameTypes.None">
             <summary>
-            What character is to be used as a space
+            No Flags, just plain and simple name generation.
             </summary>
         </member>
-        <member name="M:NameGenerator.GamerTagGenerator.Generate">
+        <member name="F:NameGenerator.GeneratorBase.NameTypes.Numbers">
             <summary>
-            Method that generates a gamertag, taking into account generation flags such as whether to add numbers or not
+            A number between 0 and 999 will be appended to the name.
+            </summary>
+        </member>
+        <member name="F:NameGenerator.GeneratorBase.NameTypes.Hashtag">
+            <summary>
+            A hashtag will come before the name.
+            </summary>
+        </member>
+        <member name="T:NameGenerator.Generators.GamerTagGenerator">
+            <summary>
+            A class for the generation of gamer tags.
+            </summary>
+            <remarks>Derives from the GeneratorBase abstract class.</remarks>
+        </member>
+        <member name="M:NameGenerator.Generators.GamerTagGenerator.#ctor">
+            <summary>
+            The constructor for the GamerTagGenerator class.
+            Sets the default space character to an underscore.
+            </summary>
+        </member>
+        <member name="M:NameGenerator.Generators.GamerTagGenerator.Generate">
+            <summary>
+            This method generates a gamertag.
+            It will perform additional operations depending on what generator flags have been set.
             </summary>
             <returns>A string containing a gamertag</returns>
         </member>
-        <member name="T:NameGenerator.IGenerator">
+        <member name="T:NameGenerator.Generators.RealNameGenerator">
             <summary>
-            Top level class regarding the different name Generators
+            A class for the generation of human names.
             </summary>
+            <remarks>Derives from the GeneratorBase abstract class.</remarks>
         </member>
-        <member name="M:NameGenerator.IGenerator.Generate">
+        <member name="M:NameGenerator.Generators.RealNameGenerator.Generate">
             <summary>
-            Method that generates names, gamertags, etc.
+            This method generates a human name.
+            It will perform additional operations depending on what generator flags have been set.
             </summary>
-            <returns>string that contains the name generated</returns>
-        </member>
-        <member name="T:NameGenerator.IGenerator.NameTypes">
-            <summary>
-            Enum containing all the different generator flags
-            </summary>
-        </member>
-        <member name="F:NameGenerator.IGenerator.NameTypes.None">
-            <summary>
-            No Flags, just simple name generation
-            </summary>
-        </member>
-        <member name="F:NameGenerator.IGenerator.NameTypes.Numbers">
-            <summary>
-            A number between 0 and 999 will be appended to the name
-            </summary>
-        </member>
-        <member name="F:NameGenerator.IGenerator.NameTypes.Hashtag">
-            <summary>
-            A hashtag will come before the name
-            </summary>
-        </member>
-        <member name="T:NameGenerator.NameGenerator">
-            <summary>
-            This is the generator subclass for generating real names.
-            Contains a single method for the generation of a name.
-            </summary>
-        </member>
-        <member name="M:NameGenerator.NameGenerator.#ctor">
-            <summary>
-            Constructor
-            </summary>
-        </member>
-        <member name="F:NameGenerator.NameGenerator.GeneratorFlags">
-            <summary>
-            These are enum flags regarding generation settings, such as whether or not to append numbers to the name
-            </summary>
-        </member>
-        <member name="P:NameGenerator.NameGenerator.Space">
-            <summary>
-            String that is used instead of a space character, by default it is set to space
-            </summary>
-        </member>
-        <member name="M:NameGenerator.NameGenerator.Generate">
-            <summary>
-            This method generates a random real name, taking generation flags and the chosen space character into account
-            </summary>
-            <returns>A string containing a random first and last name, seperated by the chosen space character</returns>
+            <returns>A string containing a human name</returns>
         </member>
     </members>
 </doc>
