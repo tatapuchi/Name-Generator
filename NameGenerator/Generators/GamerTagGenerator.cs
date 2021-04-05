@@ -1,52 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static NameGenerator.IGenerator;
 
-namespace NameGenerator
+namespace NameGenerator.Generators
 {
     /// <summary>
-    /// Class for generating gamer tags
+    /// A class for the generation of gamer tags.
     /// </summary>
-    public class GamerTagGenerator : IGenerator
+    /// <remarks>Derives from the GeneratorBase abstract class.</remarks>
+    public class GamerTagGenerator : GeneratorBase
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public GamerTagGenerator()
-        {
-            Space = "_";
-        }
-
-        private Random random = new Random();
-
-        /// <summary>
-        /// Settings regarding generated names
-        /// </summary>
-        public NameTypes GeneratorFlags = NameTypes.Numbers;
-
-        /// <summary>
-        /// What character is to be used as a space
-        /// </summary>
-        public string Space { get; set; }
 
         private List<string> GamerTags = new List<string>()
         {
             "bolb", "doge", "cheems", "cheebs", "troll", "lol", "amogus", "red", "sus", "chungus", "big chungus", "impostor", "guagg", "krab", "yo mama", "yharon", "clam"
         };
 
+        /// <summary>
+        /// The constructor for the GamerTagGenerator class.
+        /// Sets the default space character to an underscore.
+        /// </summary>
+        public GamerTagGenerator()
+        {
+            SpaceCharacter = "_";
+            GeneratorFlags = NameTypes.None;
+        }
 
         /// <summary>
-        /// Method that generates a gamertag, taking into account generation flags such as whether to add numbers or not
+        /// This method generates a gamertag.
+        /// It will perform additional operations depending on what generator flags have been set.
         /// </summary>
         /// <returns>A string containing a gamertag</returns>
-        public string Generate()
+        public override string Generate()
         {
             string gamerTag = Randomize(GamerTags[random.Next(0, GamerTags.Count)]);
 
-            gamerTag = gamerTag.Replace(" ", Space);
+            gamerTag = gamerTag.Replace(" ", SpaceCharacter);
 
-            if (GeneratorFlags.HasFlag(NameTypes.Numbers)) { gamerTag += (Space + random.Next(0, 999).ToString()); }
+            if (GeneratorFlags.HasFlag(NameTypes.Numbers)) { gamerTag += (SpaceCharacter + random.Next(0, 999).ToString()); }
 
             if (GeneratorFlags.HasFlag(NameTypes.Hashtag)) { gamerTag = "#" + gamerTag; }
 
@@ -92,6 +83,7 @@ namespace NameGenerator
             return gamerTag;
 
         }
+
 
     }
 }
