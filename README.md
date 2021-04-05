@@ -36,7 +36,7 @@ You can change this to whatever you want, simply change the property in your ins
 
 ```csharp
 RealNameGenerator Generator = new RealNameGenerator();
-Generator.Space = "-";
+Generator.SpaceCharacter = "-";
 //You are now using a hypen(dash) for instead of a space
 ```
 
@@ -48,6 +48,6 @@ These may prove useful when generating gamertags.
 
 ```csharp
 GamerTagGenerator Generator = new GamerTagGenerator();
-Generator.GeneratorFlags |= IGenerator.NameTypes.Hashtag;
+Generator.GeneratorFlags |= NameTypes.Hashtag;
 //Hashtags will now come before your gamertags, eg: #b01b
 ```
