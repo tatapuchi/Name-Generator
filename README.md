@@ -8,11 +8,11 @@ A small library for generating names and gamertags.
 We have a list of first and last names that get randomly mashed together and returned, to generate real names, refer to the following code:
 
 ```csharp
-NameGenerator Generator = new NameGenerator();
+RealNameGenerator Generator = new RealNameGenerator();
 Generator.Generate();
 ```
 
-Create an instance of the `NameGenerator` class, and simply call the `Generate()` method, and this will return the generated string
+Create an instance of the `RealNameGenerator` class, and simply call the `Generate()` method, and this will return the generated string
 
 ---
 
@@ -35,8 +35,8 @@ You can change whatever character you use as a space, for the `NameGenerator` cl
 You can change this to whatever you want, simply change the property in your instance of whatever generator you are using
 
 ```csharp
-NameGenerator Generator = new NameGenerator();
-Generator.Space = "-";
+RealNameGenerator Generator = new RealNameGenerator();
+Generator.SpaceCharacter = "-";
 //You are now using a hypen(dash) for instead of a space
 ```
 
@@ -48,6 +48,6 @@ These may prove useful when generating gamertags.
 
 ```csharp
 GamerTagGenerator Generator = new GamerTagGenerator();
-Generator.GeneratorFlags |= IGenerator.NameTypes.Hashtag;
+Generator.GeneratorFlags |= NameTypes.Hashtag;
 //Hashtags will now come before your gamertags, eg: #b01b
 ```
